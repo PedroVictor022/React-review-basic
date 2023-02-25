@@ -6,9 +6,7 @@ function App() {
   return (
     <>
 
-      <Header
-        title="Jstack's Blog"
-      >
+      <Header>
         <h2>Posts of the week</h2>
       </Header>
 
