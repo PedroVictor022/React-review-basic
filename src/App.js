@@ -2,8 +2,7 @@ import React, { createContext, useState } from "react";
 import Button from "./components/Button";
 import Header from "./components/Header";
 import { Post } from "./components/Post";
-
-export const ThemeContext = createContext('dark');
+import ThemeProvider from "./components/ThemeContext";
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -58,21 +57,15 @@ function App() {
     ))
   }
 
-  const handleTheme = () => {
-    setTheme(prevState => prevState === "dark" ? "light" : "dark")
-  }
-
 
   return (
-    <ThemeContext.Provider value={theme}>
-      <Header>
+    <ThemeProvider>
+      <Header
+        
+      >
           <p>Posts of the week</p>
           <button onClick={handleUpdate}>Update posts</button>
-          <Button
-            onClick={() => handleTheme()}
-          >
-            Change Theme
-          </Button>
+          
       </Header>
 
       {
@@ -84,7 +77,7 @@ function App() {
           />
         ))
       }
-    </ThemeContext.Provider>
+    </ThemeProvider>
   )
 }
 

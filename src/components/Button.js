@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "./ThemeContext";
 export default function Button(props) {
 
-  const theme = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
 
   return (
     <button 

@@ -1,11 +1,21 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import Button from "./Button";
+import { ThemeContext } from "./ThemeContext";
 
 export default function Header({ title, children }) {
+
+  const { onToggleTheme } = useContext(ThemeContext);
+
   return (
     <>
-      {/* <h1>{title ?? "Jstack's Blog"}</h1> */}
       <h1>{title}</h1>
-      { children }
+      <Button
+        onClick={onToggleTheme}
+      >
+        Change Theme
+      </Button>
+      {children}
       <hr />
     </>
   )
