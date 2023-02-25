@@ -1,14 +1,18 @@
-export function Post({ title, subTitle }) {
+import PropTypes from "prop-types";
 
-  console.log({title, subTitle})
+export function Post({ title, subTitle, likes }) {
+
+  console.log({title})
 
   return (
     <>
       <article>
         <strong>{title ?? "Default Post"}</strong><br />
         <small>{subTitle ?? "Comments"}</small>
-        <br/>
+        <br />
+        Media: {likes / 2}
       </article>
     </>
   )
 }
+

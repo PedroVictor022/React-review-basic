@@ -5,18 +5,27 @@ import { Post } from "./components/Post";
 function App() {
   return (
     <>
-      
-      <Header>
+
+      <Header
+        title="Jstack's Blog"
+      >
         <h2>Posts of the week</h2>
       </Header>
 
       <Post
-        title="Week 1"
-        subTitle="Hello World"
+        post={{
+          title:"Week 1",
+          subTitle:"Hello World"
+        }}
+      likes={10}
       />
 
-      <Post 
-        title="Week 2"
+      <Post
+        post={{
+          title:"Week 2",
+          subTitle:"Install propTypes"
+        }}
+        likes={12}
       />
 
     </>
