@@ -25,6 +25,13 @@ function App() {
       subTitle: "Subtitle 3",
       like: 27,
       read: true
+    },
+    {
+      id: Math.random(),
+      title: "Title 4",
+      subTitle: "Subtitle 4",
+      like: 27,
+      read: false
     }
   ]);
 
