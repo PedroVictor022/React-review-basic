@@ -1,13 +1,14 @@
+import Header from "./components/Header";
 import { Post } from "./components/Post";
 
 
 function App() {
   return (
     <>
-      <h1>JStack's Blog</h1>
-      <h2>Posts da semana</h2>
-
-      <hr/>
+      
+      <Header>
+        <h2>Posts of the week</h2>
+      </Header>
 
       <Post
         title="Week 1"
