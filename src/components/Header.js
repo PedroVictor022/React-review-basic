@@ -18,5 +18,4 @@ Header.propTypes = {
 
 Header.defaultProps = {
   title: `JStack's Blog`,
-
 }
