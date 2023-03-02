@@ -1,8 +1,8 @@
 import React, { createContext, useState } from "react";
-import Button from "./components/Button";
-import Header from "./components/Header";
-import { Post } from "./components/Post";
-import ThemeProvider from "./components/ThemeContext";
+import Button from "./components/button";
+import Header from "./components/header";
+import { Post } from "./components/post";
+import ThemeProvider from "./components/context/ThemeContext";
 
 function App() {
   const [theme, setTheme] = useState('light');

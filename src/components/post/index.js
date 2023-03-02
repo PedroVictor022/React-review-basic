@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import PostHeader from "./PostHeader";
+import PostHeader from "../postHeader";
+import { Rate, Subtitle } from "./styles";
 
 export function Post(props) {
 
@@ -14,11 +15,11 @@ export function Post(props) {
             read: props.post.read
           }}
         />
-        <br />
-        <small>{props.post.subTitle}</small>
-        <br />
-        Media: {props.post.like / 2}
-        <br />
+        
+        <Subtitle>{props.post.subTitle}</Subtitle>
+        
+        <Rate>Media: {props.post.like / 2}</Rate>
+        
 
       </article>
     </>

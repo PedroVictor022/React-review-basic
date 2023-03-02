@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import Button from "./Button";
-import { ThemeContext } from "./ThemeContext";
+import Button from "../button";
+import { ThemeContext } from "../context/ThemeContext";
+
+import styled from "styled-components";
 
 export default function Header({ title, children }) {
 
@@ -9,7 +11,7 @@ export default function Header({ title, children }) {
 
   return (
     <>
-      <h1>{title}</h1>
+      <Title>{title}</Title>
       <Button
         onClick={onToggleTheme}
       >
@@ -29,3 +31,8 @@ Header.propTypes = {
 Header.defaultProps = {
   title: `JStack's Blog`,
 }
+
+
+const Title = styled.h1`
+  color: #637BF3;
+`;
